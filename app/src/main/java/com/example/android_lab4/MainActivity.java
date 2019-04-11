@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String[] values=new String[]{"Pies","Kot","Koń","Gołąb","Kruk"};
+        String[] values=new String[]{"Pies","Kot","Koń","Gołąb","Kruk","Osioł", "Chomik", "Mysz", "Jeż", "Kraluch"};
         this.target=new ArrayList<String>();
         this.target.addAll(Arrays.asList(values));
         this.adapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,this.target);
-        ListView listView=(ListView)findViewById(android.R.id.list);
+        ListView listView=(ListView)findViewById(R.id.listView);
         listView.setAdapter(this.adapter);
 
     }

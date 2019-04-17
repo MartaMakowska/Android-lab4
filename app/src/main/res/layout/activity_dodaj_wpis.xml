@@ -6,26 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".DodajWpis">
 
+
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/wielkosc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="277dp"
-        android:layout_marginBottom="409dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="196dp"
+        android:ems="10"
+        android:inputType="number"
+
+        android:hint="Wielkosc"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/kolor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="64dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Kolor"
+        app:layout_constraintBottom_toTopOf="@+id/wielkosc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/opis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="96dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="Opis"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/gatunek"
+        android:layout_width="210dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="16dp"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown"
+        android:hint="Gatunek"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginBottom="256dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="48dp"
         android:onClick="wyslij"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"

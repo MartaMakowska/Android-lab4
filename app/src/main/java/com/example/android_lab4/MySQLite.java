@@ -62,7 +62,7 @@ public class MySQLite extends SQLiteOpenHelper {
     public Animal pobierz(int id){
         SQLiteDatabase db= this.getReadableDatabase();
         Cursor cursor=db.query("animals",new String[]{ "_id","gatunek","kolor","wielkosc","opis"}, "_id = ?",
-                new String[]{String.valueOf(id)},null,null,null);
+                new String[]{String.valueOf(id)},null,null,null,null);
         if(cursor!=null)
             cursor.moveToFirst();
         Animal zwierz=new Animal(cursor.getString(1),cursor.getString(2),cursor.getFloat(3),cursor.getString(4));

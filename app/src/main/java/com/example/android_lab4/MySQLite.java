@@ -47,6 +47,7 @@ public class MySQLite extends SQLiteOpenHelper {
     }
     public int aktualizuj(Animal zwierz){
         SQLiteDatabase db=this.getWritableDatabase();
+
         ContentValues values=new ContentValues();
         values.put("gatunek",zwierz.getGatunek());
         values.put("kolor",zwierz.getKolor());
@@ -54,6 +55,7 @@ public class MySQLite extends SQLiteOpenHelper {
         values.put("opis",zwierz.getOpis());
 
         int i=db.update("animals",values,"_id = ?",new String[]{String.valueOf(zwierz.get_id())});
+
         db.close();
 
         return i;
@@ -61,6 +63,7 @@ public class MySQLite extends SQLiteOpenHelper {
     }
     public Animal pobierz(int id){
         SQLiteDatabase db= this.getReadableDatabase();
+
         Cursor cursor=db.query("animals",new String[]{ "_id","gatunek","kolor","wielkosc","opis"}, "_id = ?",
                 new String[]{String.valueOf(id)},null,null,null,null);
         if(cursor!=null)
